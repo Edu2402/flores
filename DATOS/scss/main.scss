@@ -1391,3 +1391,69 @@ body {
 .container * {
   animation-play-state: paused !important;
 }
+
+/* ===== Flores añadidas al ramo (agregado, sin modificar lo existente) ===== */
+.flower__leafs--4 { animation-delay: 2s; }
+.flower__leafs--5 { animation-delay: 2.3s; }
+.flower__leafs--6 { animation-delay: 2.6s; }
+
+.flower--4 {
+  left: 50%;
+  transform: rotate(35deg);
+  animation: moving-flower-4 4s linear infinite;
+  .flower__line {
+    height: 65vmin;
+    animation-delay: 1.2s;
+    &__leaf {
+      &--1 { animation: blooming-leaf-right var(--fl-speed) 2.8s backwards; }
+      &--2 { animation: blooming-leaf-right var(--fl-speed) 2.6s backwards; }
+      &--3 { animation: blooming-leaf-left var(--fl-speed) 2.4s backwards; }
+      &--4 { animation: blooming-leaf-left var(--fl-speed) 2.2s backwards; }
+    }
+  }
+}
+
+.flower--5 {
+  left: 50%;
+  transform: rotate(-32deg);
+  animation: moving-flower-5 4s linear infinite;
+  .flower__line {
+    height: 62vmin;
+    animation-delay: 1.5s;
+    &__leaf {
+      &--1 { animation: blooming-leaf-right var(--fl-speed) 3.2s backwards; }
+      &--2 { animation: blooming-leaf-right var(--fl-speed) 3s backwards; }
+      &--3 { animation: blooming-leaf-left var(--fl-speed) 2.8s backwards; }
+      &--4 { animation: blooming-leaf-left var(--fl-speed) 2.6s backwards; }
+    }
+  }
+}
+
+.flower--6 {
+  left: 42%;
+  transform: rotate(8deg);
+  animation: moving-flower-6 4s linear infinite;
+  .flower__line {
+    height: 68vmin;
+    animation-delay: 1.8s;
+    &__leaf {
+      &--1 { animation: blooming-leaf-right var(--fl-speed) 3.6s backwards; }
+      &--2 { animation: blooming-leaf-right var(--fl-speed) 3.4s backwards; }
+      &--3 { animation: blooming-leaf-left var(--fl-speed) 3.2s backwards; }
+      &--4 { animation: blooming-leaf-left var(--fl-speed) 3s backwards; }
+    }
+  }
+}
+
+@keyframes moving-flower-4 {
+  0%, 100% { transform: rotate(33deg); }
+  50% { transform: rotate(37deg); }
+}
+@keyframes moving-flower-5 {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(-34deg); }
+}
+@keyframes moving-flower-6 {
+  0%, 100% { transform: rotate(6deg); }
+  50% { transform: rotate(10deg); }
+}
